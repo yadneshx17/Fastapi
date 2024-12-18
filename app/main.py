@@ -36,4 +36,4 @@ app.include_router(vote.router)
 
 @app.get("/")  # / - is the path that reference the path that we have to go in the url.
 def root():
-    return {"message": "welcome to my API "} # whatever we return here is gonna be the data sent back to the user
+    return {"message": "welcome to my API ! "} # whatever we return here is gonna be the data sent back to the user
