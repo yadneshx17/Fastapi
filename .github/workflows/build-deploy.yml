@@ -7,5 +7,13 @@ jobs:
     steps:
       - name: pulling git repo
         uses: actions/checkout@v4
-      - name: say hello to Yadnesh
-        run: echo "Hello Yadnesh"
+
+      - name: Installing Python version 3.13
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.13' 
+      - run: python my_script.py
+      - name: update pip
+        run: python -m pip install --upgrade pip
+      - name: Install all dependencies
+        run: pip install -r requirements.txt
