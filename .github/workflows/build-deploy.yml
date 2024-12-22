@@ -12,7 +12,6 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.13' 
-      - run: python my_script.py
       - name: update pip
         run: python -m pip install --upgrade pip
       - name: Install all dependencies
