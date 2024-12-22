@@ -11,6 +11,7 @@ print(settings.database_hostname)
 print(settings.database_name)
 
 # this commands told Sql alchemy to run the create statement so that it generated all of the tables when first started up. we don't need it now cause Alembic is    used.
+
 # models.Base.metadata.create_all(bind=engine)
 
 app = FastAPI() # instance of Fastapi 
@@ -36,4 +37,4 @@ app.include_router(vote.router)
 
 @app.get("/")  # / - is the path that reference the path that we have to go in the url.
 def root():
-    return {"message": "welcome to my API ! "} # whatever we return here is gonna be the data sent back to the user
+    return {"message": "welcome to my API !"} # whatever we return here is gonna be the data sent back to the user
