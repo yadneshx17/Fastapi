@@ -9,10 +9,11 @@ from .config import settings
 # Hard Coded URL
 # SQLALCHEMY_DATABASE_URL = f'postgresql://postgres:Yadnesh%40017@localhost:5432/fastapi'
 
-SQLALCHEMY_DATABASE_URL = f'postgresql://{settings.database_username}:{settings.database_password}@{settings.database_hostname}:{settings.database_port}/{settings.database_name}' 
+SQLALCHEMY_DATABASE_URL = f'postgresql://{settings.database_username}:{settings.database_password}@{settings.database_hostname}:{settings.database_port}/{settings.database_name}'
 
 print(SQLALCHEMY_DATABASE_URL)
 
+# makes an database connection
 engine = create_engine(SQLALCHEMY_DATABASE_URL)
 
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
