@@ -110,7 +110,7 @@ def delete_post(id: int, db: Session = Depends(get_db), current_user: int = Depe
 
     # check if the post exists
     if post == None:
-        return HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail=f"Post with id: {id} does not exist")
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail=f"Post with id: {id} does not exist")
     
     # check the user deleting the post
     if post.owner_id != current_user.id:
