@@ -17,7 +17,8 @@ print(settings.database_name)
 app = FastAPI() # instance of Fastapi 
 
 # origins = ["https://www.google.com", "https://www.youtube.com"]
-origins = ["*"]
+# Every One Can access it Every Single domain/Origin
+origins = ["*"] 
 
 app.add_middleware(
     CORSMiddleware, # function it will run for all the requests.
