@@ -16,7 +16,8 @@ print(SQLALCHEMY_DATABASE_URL)
 # makes an database connection
 engine = create_engine(SQLALCHEMY_DATABASE_URL)
 
-SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
+# sessionmaker function creats SessionLocal class 
+SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine) 
 
 Base = declarative_base()
 
