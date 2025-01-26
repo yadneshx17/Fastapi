@@ -19,6 +19,9 @@ engine = create_engine(SQLALCHEMY_DATABASE_URL)
 # sessionmaker function creats SessionLocal class 
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine) 
 
+# declarative_base() is a factory function that generates a base class (Base) for your SQLAlchemy ORM models.
+# This base class provides all the foundational functionality needed for your models to interact with the database.
+# helps to convert regulars classes into sqlalchemy classes. 
 Base = declarative_base()
 
 def get_db():
