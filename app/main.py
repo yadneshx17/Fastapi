@@ -12,7 +12,8 @@ print(settings.database_name)
 
 # this commands told Sql alchemy to run the create statement so that it generated all of the tables when first started up. we don't need it now cause Alembic is    used.
 
-# models.Base.metadata.create_all(bind=engine)
+# models.Base.metadata.create_all(bind=engine)   # Creates all tables tracked by Base
+
     
 app = FastAPI() # instance of Fastapi 
 
